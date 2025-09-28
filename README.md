@@ -1,5 +1,4 @@
 # 🇧🇷 Political Attitude Networks in Brazil using ResIN
-# 🇧🇷 Political Attitude Networks in Brazil using ResIN
 
 This repository applies the **Response Item Network (ResIN)** method to Brazilian political survey data (*Política Brasil.csv*). The analysis compares respondents who identify with the **Left** and the **Right**, mapping how their political attitudes interconnect into coherent ideological structures.  
 
@@ -126,7 +125,7 @@ The analysis is contained in the Jupyter notebook **`network.ipynb`**.
 
 ## 📖 References
 
-* Lüders, A., Carpentras, D., & Quayle, M. (2022). *Attitude networks as intergroup realities: Using network-modelling to research attitude–identity relationships in polarized political contexts.* *British Journal of Social Psychology*, 61(4), 1338–1356. [https://doi.org/10.1111/bjso.12665](https://doi.org/10.1111/bjso.12665)
+* Lüders, A., Carpentras, D., & Quayle, M. (2023). *Attitude networks as intergroup realities: Using network-modelling to research attitude–identity relationships in polarized political contexts.* *British Journal of Social Psychology*, 61(4), 1338–1356. [https://doi.org/10.1111/bjso.12665](https://doi.org/10.1111/bjso.12665)
 * Carpentras, D., Lüders, A., & Quayle, M. (2024). *Response Item Network (ResIN): A network-based approach to explore attitude systems.* *Humanities and Social Sciences Communications*, 11, 632. [https://www.nature.com/articles/s41599-024-03037-x](https://www.nature.com/articles/s41599-024-03037-x)
 
 ```
