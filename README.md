@@ -1,55 +1,44 @@
 # 🇧🇷 Political Attitude Networks in Brazil using ResIN
+# 🇧🇷 Political Attitude Networks in Brazil using ResIN
 
-This repository applies the **Response Item Network (ResIN)** method to Brazilian political survey data (*Política Brasil.csv*). Inspired by recent advances in **network psychometrics** and attitude systems, the analysis compares respondents who identify with the **Left** and the **Right**.  
+This repository applies the **Response Item Network (ResIN)** method to Brazilian political survey data (*Política Brasil.csv*). The analysis compares respondents who identify with the **Left** and the **Right**, mapping how their political attitudes interconnect into coherent ideological structures.  
 
-The project builds upon methodological work such as:  
+The approach builds on recent work in **network psychometrics and attitude systems**, particularly:  
 
-- Jonas Dalege et al. (2017). *The attitude network approach to attitudes: The structure of interconnections predicts attitude strength.* *Nature Human Behaviour.*  
-- Stelling et al. (2024). *Response Item Network (ResIN): A novel method to study the internal structure of responses.* *Humanities and Social Sciences Communications.* [[Nature link]](https://www.nature.com/articles/s41599-024-03037-x)  
+- Lüders, A., Carpentras, D., & Quayle, M. (2023). *Attitude networks as intergroup realities: Using network-modelling to research attitude–identity relationships in polarized political contexts.* *British Journal of Social Psychology*, 61(4), 1338–1356. [https://doi.org/10.1111/bjso.12665](https://doi.org/10.1111/bjso.12665)  
+- Carpentras, D., Lüders, A., & Quayle, M. (2024). *Response Item Network (ResIN): A network-based approach to explore attitude systems.* *Humanities and Social Sciences Communications*, 11, 632. [https://www.nature.com/articles/s41599-024-03037-x](https://www.nature.com/articles/s41599-024-03037-x)  
 
 ---
 
 ## 📊 Methodology
 
-1. **ResIN networks** are built for Left and Right respondents.  
-   - Nodes represent question–response pairs.  
-   - Edges represent co-endorsement (correlation between binary response patterns).  
-2. A **difference network** (Δ Left – Right) highlights divergences between groups.  
-   - Red = stronger associations among the Left.  
-   - Yellow = stronger associations among the Right.  
-3. **Homogeneity metrics** (density, average edge strength, modularity) quantify the degree of internal coherence within each group.  
+1. **ResIN networks** were constructed separately for Left and Right respondents.  
+   - **Nodes** = response options (e.g., Q1: Concordo, Q1: Discordo).  
+   - **Edges** = co-endorsement, i.e., the correlation between binary response vectors.  
+2. A **difference network** (Δ Left – Right) highlights divergences in association strength.  
+   - **Red edges** = stronger within the Left.  
+   - **Yellow edges** = stronger within the Right.  
+3. **Homogeneity metrics** (density, average strength, modularity) quantify the structural organization of each group.  
 
 ---
 
-# 🧠 Explanation of Graphs
+# 🧠 Graphical Results
 
-### **Graph 1 – ResIN (Left)**
-
-This network depicts the attitudinal structure of respondents who identify with the **Left**. Each node is a survey response (Q1, Q2, …), and edges show how often two responses co-occur. Stronger co-endorsements appear as thicker edges.  
-
+### **Graph 1 – ResIN (Left)**  
 ![ResIN Left](resin_left.png)  
 
-*Interpretation*: The Left shows **selective cohesion**. Redistribution and minority rights cluster strongly, while other issues form looser connections.  
+The Left network shows **cohesive clusters** around redistribution, social programs, minority rights, and environmental regulation. While certain clusters are strongly interconnected, the overall structure retains **subgroups and fragmentation**, indicating ideological diversity within the Left.  
 
 ---
 
-### **Graph 2 – ResIN (Right)**
-
-The corresponding network for respondents who identify with the **Right** shows a denser, more evenly distributed structure.  
-
+### **Graph 2 – ResIN (Right)**  
 ![ResIN Right](resin_right.png)  
 
-*Interpretation*: The Right exhibits **more diffuse but stable coherence**, with issues like immigration, firearms, and economic policy binding attitudes more consistently together.  
+The Right network displays a **denser and more unified structure**, with broad connectivity across immigration, firearms, and attitudes toward government regulation. The network suggests a **higher degree of internal coherence**, with fewer isolated clusters compared to the Left.  
 
 ---
 
-### **Graph 3 – Difference Network (Δ Left – Right)**
-
-This visualization isolates the **fault lines of polarization**.  
-
-- **Red edges**: associations stronger within the Left (e.g., redistribution + minority rights).  
-- **Yellow edges**: associations stronger within the Right (e.g., immigration + firearms).  
-- Two versions are displayed: **full labels** (Qn:Response) and **simplified labels** (Qn only).  
+### **Graph 3 – Difference Network (Δ Left – Right)**  
 
 **Full labels version:**  
 ![Difference Network Full](resin_diff_full.png)  
@@ -57,32 +46,33 @@ This visualization isolates the **fault lines of polarization**.
 **Simplified labels version:**  
 ![Difference Network Simple](resin_diff_simple.png)  
 
-*Interpretation*: Polarization is not only about endorsing different positions, but about **different ways of connecting beliefs**. The Left fuses equality-related issues, while the Right couples cultural and security concerns.  
+This network captures the **fault lines of polarization**.  
+- **Red edges** highlight associations stronger among the Left (e.g., redistribution linked with minority rights and welfare expansion).  
+- **Yellow edges** highlight associations stronger among the Right (e.g., immigration paired with firearm policy).  
+
+The structural divergence indicates that Left and Right not only disagree on policy outcomes but also organize their **belief systems differently**.  
 
 ---
 
-### **Graph 4 – Homogeneity Comparison**
-
-This bar chart compares Left and Right networks across three metrics:  
-
-- **Density** → more realized associations.  
-- **Average strength** → stronger ties overall.  
-- **Modularity** → degree of fragmentation into clusters.  
-
+### **Graph 4 – Homogeneity Comparison**  
 ![Homogeneity Comparison](resin_homogeneity.png)  
 
-*Interpretation*: The Right is **more homogeneous**, with higher density and integration. The Left shows **greater internal differentiation**, forming modular clusters of coherence.  
+Three network-level measures provide a quantitative comparison:  
+- **Density**: Higher for the Right, reflecting more realized associations across issues.  
+- **Average strength**: Slightly higher for the Left, meaning that when clusters form, ties are more intense.  
+- **Modularity**: Higher for the Left, showing the presence of distinct ideological subgroups, while the Right remains less fragmented.  
 
 ---
 
-# 🌍 Broader Meaning
+# 🌍 Interpretation
 
-These results suggest that polarization in Brazil is not limited to disagreement over single issues. Instead, Left and Right differ in how their beliefs are **structured internally**.  
+The results reveal **asymmetries in ideological organization**:  
 
-- The **Left** forms intense but modular clusters centered on equality and inclusion.  
-- The **Right** exhibits a denser, less fragmented system, where cultural and security issues are tightly bound together.  
+- The **Left** is structured around **modular clusters**, with strong coherence in domains of equality and inclusion but overall greater internal diversity.  
+- The **Right** is characterized by a **denser, more integrated system**, where cultural conservatism, nationalism, and economic attitudes cohere into a unified ideological frame.  
+- Polarization emerges not only from disagreements on specific issues, but from **differences in belief architecture**: one side allows for pluralism within clusters, the other builds broader internal consistency.  
 
-This asymmetry helps explain how each camp mobilizes and negotiates internal diversity: the Left allows more pluralism within its structure, while the Right is unified by a broader ideological frame.  
+This structural asymmetry helps explain how each camp mobilizes and maintains ideological identity: the Left by fostering **issue-specific intensity** within clusters, and the Right by sustaining **broad integrative coherence** across issues.  
 
 ---
 
@@ -100,31 +90,26 @@ pip install -r requirements.txt
 
 ## ▶️ Usage
 
-The full analysis is contained in the Jupyter notebook **`network.ipynb`**.
+The analysis is contained in the Jupyter notebook **`network.ipynb`**.
 
-1. Make sure you have **Jupyter** installed (via `pip install jupyterlab` or `conda install jupyterlab`).
+1. Ensure you have Jupyter installed:
 
-2. Launch the notebook environment:
+   ```bash
+   pip install jupyterlab
+   ```
+2. Launch the notebook:
 
    ```bash
    jupyter notebook network.ipynb
    ```
+3. Run all cells. The notebook will:
 
-3. Open the notebook in your browser, execute the cells step by step, and the following outputs will be generated automatically:
-
-   * **ResIN - Left** (`resin_left.png`)
-   * **ResIN - Right** (`resin_right.png`)
-   * **Difference Network (full labels)** (`resin_diff_full.png`)
-   * **Difference Network (simplified labels)** (`resin_diff_simple.png`)
-   * **Homogeneity comparison bar chart** (`resin_homogeneity.png`)
-
-The notebook also prints the **reference map** linking question codes (Q1, Q2, …) to the original Portuguese survey questions and their English translations.
+   * Generate and save the four graphs (`resin_left.png`, `resin_right.png`, `resin_diff_full.png`, `resin_diff_simple.png`, `resin_homogeneity.png`).
+   * Print the **reference map** linking question codes (Q1–Q8) to Portuguese survey items and their English translations.
 
 ---
 
 ## 📝 Survey Questions
-
-Below is the reference map of the survey items used in the networks.
 
 | Code | Portuguese                                                                                                                | English Translation                                                                                                               |
 | ---- | ------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
@@ -141,8 +126,7 @@ Below is the reference map of the survey items used in the networks.
 
 ## 📖 References
 
-* Dalege, J., Borsboom, D., van Harreveld, F., & van der Maas, H. L. J. (2017). *The attitude network approach to attitudes: The structure of interconnections predicts attitude strength.* *Nature Human Behaviour*, 1, 0001.
-* Stelling, K., et al. (2024). *Response Item Network (ResIN): A novel method to study the internal structure of responses.* *Humanities and Social Sciences Communications.* [https://www.nature.com/articles/s41599-024-03037-x](https://www.nature.com/articles/s41599-024-03037-x)
+* Lüders, A., Carpentras, D., & Quayle, M. (2022). *Attitude networks as intergroup realities: Using network-modelling to research attitude–identity relationships in polarized political contexts.* *British Journal of Social Psychology*, 61(4), 1338–1356. [https://doi.org/10.1111/bjso.12665](https://doi.org/10.1111/bjso.12665)
+* Carpentras, D., Lüders, A., & Quayle, M. (2024). *Response Item Network (ResIN): A network-based approach to explore attitude systems.* *Humanities and Social Sciences Communications*, 11, 632. [https://www.nature.com/articles/s41599-024-03037-x](https://www.nature.com/articles/s41599-024-03037-x)
 
 ```
-
